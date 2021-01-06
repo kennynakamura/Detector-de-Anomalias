@@ -10,4 +10,4 @@ todos  - Arquivos separados com o mesmo número de linhas.
 Os modelos pré-treinados podem ser baixados no HugginsFaces, procurar pelo Bertimbau e Multilingual.
 Neste script foi usado os modelos do Torch, do PyTorch. Por isso a biblioteca torch importada no começo do programa.
 
-![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/master/Fluxograma.jpg?raw=true)
+![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/Fluxograma.jpg?raw=true)
