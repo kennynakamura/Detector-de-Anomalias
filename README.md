@@ -1,6 +1,11 @@
 # Detector-de-Anomalias
 
-Cria-se 3 pastas: ArquivoTxT, result, todos   
+As investigações digitais têm enfrentado um aumento exponencial da quantidade de dados disponíveis para serem analisados em uma investigação. Esses dados são produzidos de inúmeras formas, desde de e-mails, transações bancárias, troca de mensagens instantâneas, localizações geográficas, acesso de sites, entre outras. Desta forma, é inviável que um analista investigue de maneira eficiente todos os dados coletados durante uma investigação sem o auxílio de ferramentas de análise [Nicole B et all 2005]. Essas ferramentas são softwares que buscam encontrar dados relacionados especificamente a investigação, além de significados, padrões e anormalidades sobre todo o conjunto de arquivos, esse processo é chamado de Data Mining.
+ O escopo deste trabalho é sobre o processo de análise dos grandes conjuntos de dados, especificamente de diálogos em texto, buscando encontrar códigos ocultos que sejam relacionados a atividades criminosas. A demanda desta aplicação se dá pelo amplo uso de codinomes com intuito de dissuadir uma investigação, e a não produção de provas que comprometam o criminoso.  Assim espera-se que o projeto desenvolvido identifique codinomes, mesmo com uma alta taxa de erro esperada dada a complexidade do problema. 
+
+Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations. DigitalForensics 2005: Advances in Digital Forensics pp 3-16. 
+
+Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta com o arquivo RUN.py 
 
 ArquivoTxT    - Onde os arquivos txt a serem analisados devem ser colocados  
 result - Onde o arquivo único com todos os textos juntos  
