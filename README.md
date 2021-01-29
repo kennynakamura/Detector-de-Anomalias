@@ -6,16 +6,17 @@ O escopo deste trabalho é sobre o processo de análise dos grandes conjuntos de
 
 Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations. DigitalForensics 2005: Advances in Digital Forensics pp 3-16. 
 
-Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta com o arquivo RUN.py 
+Como usar o programa
+
+Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
 
 ArquivoTxT    - Onde os arquivos txt a serem analisados devem ser colocados  
 result - Onde o arquivo único com todos os textos juntos será criado  
 todos  - Arquivos separados com o mesmo número de linhas será criado
 
-Os modelos pré-treinados podem ser baixados no HugginsFaces, procurar pelo bert-base-multilingual-uncased.  
-
-Dentro dos modelos deve haver 3 arquivos: vocab.txt, config.json e pytorch_model.  
-Link para o bert multilingual uncased: https://huggingface.co/bert-base-multilingual-uncased/tree/main 
+Na mesma pasta principal deve-se ter uma paste chamada "bert-base-multilingual-uncased" 
+Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
+https://huggingface.co/bert-base-multilingual-uncased/tree/main 
 
 Neste script foi usado os modelos do Torch, do PyTorch. Por isso é necessário instalar as bibliotecas Torch e Transformers (pip install)
 
