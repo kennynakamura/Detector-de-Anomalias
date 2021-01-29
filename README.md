@@ -9,8 +9,8 @@ Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations
 Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta com o arquivo RUN.py 
 
 ArquivoTxT    - Onde os arquivos txt a serem analisados devem ser colocados  
-result - Onde o arquivo único com todos os textos juntos  
-todos  - Arquivos separados com o mesmo número de linhas.    
+result - Onde o arquivo único com todos os textos juntos será criado  
+todos  - Arquivos separados com o mesmo número de linhas será criado
 
 Os modelos pré-treinados podem ser baixados no HugginsFaces, procurar pelo bert-base-multilingual-uncased.  
 
