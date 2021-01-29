@@ -13,9 +13,9 @@ Separando as frases por sentença em cada linha e apagando as linhas que ficarem
 
 Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
 
-ArquivoTxT    - Onde os arquivos txt a serem analisados devem ser colocados  
-result - Onde o arquivo único com todos os textos juntos será criado  
-todos  - Arquivos separados com o mesmo número de linhas será criado
+ArquivoTxT - Onde os arquivos txt a serem analisados devem ser colocados  
+result     - Onde o arquivo único com todos os textos juntos será criado  
+todos      - Arquivos separados com o mesmo número de linhas será criado
 
 Na mesma pasta principal deve-se ter uma paste chamada "bert-base-multilingual-uncased" 
 Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
