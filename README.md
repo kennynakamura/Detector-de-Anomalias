@@ -8,6 +8,9 @@ Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations
 
 Como usar o programa
 
+Os arquivos a serem analisados devem ser preparados para a análise.
+Separando as frases por sentença em cada linha e apagando as linhas que ficarem com somente uma palavra. 
+
 Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
 
 ArquivoTxT    - Onde os arquivos txt a serem analisados devem ser colocados  
