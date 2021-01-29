@@ -1,18 +1,16 @@
 # Detector-de-Anomalias
 
-Cria-se 3 pastas: ttt, result, todos   
+Cria-se 3 pastas: ArquivoTxT, result, todos   
 
-ttt    - Onde os arquivos txt a serem analisados devem ser colocados  
+ArquivoTxT    - Onde os arquivos txt a serem analisados devem ser colocados  
 result - Onde o arquivo único com todos os textos juntos  
-todos  - Arquivos separados com o mesmo número de linhas.  
+todos  - Arquivos separados com o mesmo número de linhas.    
 
-É preciso mudar todos caminhos para as pastas e o modelo pré-treinado.  
-
-Os modelos pré-treinados podem ser baixados no HugginsFaces, procurar pelo Bertimbau e Multilingual.  
+Os modelos pré-treinados podem ser baixados no HugginsFaces, procurar pelo bert-base-multilingual-uncased.  
 
 Dentro dos modelos deve haver 3 arquivos: vocab.txt, config.json e pytorch_model.  
-Link para o BERTimbau: https://github.com/neuralmind-ai/portuguese-bert  
+Link para o bert multilingual uncased: https://huggingface.co/bert-base-multilingual-uncased/tree/main 
 
-Neste script foi usado os modelos do Torch, do PyTorch. Por isso a biblioteca torch importada no começo do programa.  
+Neste script foi usado os modelos do Torch, do PyTorch. Por isso é necessário instalar as bibliotecas Torch e Transformers (pip install)
 
 ![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/Fluxograma.jpg?raw=true)
