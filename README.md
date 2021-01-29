@@ -13,4 +13,4 @@ Link para o bert multilingual uncased: https://huggingface.co/bert-base-multilin
 
 Neste script foi usado os modelos do Torch, do PyTorch. Por isso é necessário instalar as bibliotecas Torch e Transformers (pip install)
 
-![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/Fluxograma.jpg?raw=true)
+![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxograma.png?raw=true)
