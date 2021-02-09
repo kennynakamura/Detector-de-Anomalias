@@ -21,6 +21,10 @@ Na mesma pasta principal deve-se ter uma paste chamada "bert-base-multilingual-u
 Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
 https://huggingface.co/bert-base-multilingual-uncased/tree/main 
 
+ou podem ser baixados pelo drive
+
+https://drive.google.com/drive/folders/10L_3YAtaHT0AC0XGoXPj-UGoNErgtnu3?usp=sharing
+
 Neste script foi usado os modelos do Torch, do PyTorch. Por isso é necessário instalar as bibliotecas Torch e Transformers (pip install)
 
 ![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxograma.png?raw=true)
