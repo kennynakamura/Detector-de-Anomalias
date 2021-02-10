@@ -31,9 +31,9 @@ Arquivos separados com o mesmo número de linhas será criado
 
 Na mesma pasta principal deve-se ter uma pasta chamada "bert-base-multilingual-uncased" 
 Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
-https://huggingface.co/bert-base-multilingual-uncased/tree/main 
-ou podem ser baixados pelo drive
-https://drive.google.com/drive/folders/10L_3YAtaHT0AC0XGoXPj-UGoNErgtnu3?usp=sharing
+https://huggingface.co/bert-base-multilingual-uncased/tree/main \
+ou podem ser baixados pelo drive\
+https://drive.google.com/drive/folders/10L_3YAtaHT0AC0XGoXPj-UGoNErgtnu3?usp=sharing \
 Estes são arquivos que auxiliaram a análise do texto.
 
 Neste script foram usados as bibliotecas Torch e Transformers. Sendo necessário instalar as bibliotecas Torch e Transformers (pip install).
