@@ -20,7 +20,7 @@ Levei o carro para o mecânico hoje, ontem estava ocupado.
 Levei o carro para o mecânico hoje\
 ontem estava ocupado
               
-###### Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
+**Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py**
 
 **ArquivoTxT**\
 Onde os arquivos txt a serem analisados devem ser colocados, somente nesse que o usuário deve interagir\
@@ -38,7 +38,6 @@ Estes são arquivos que auxiliaram a análise do texto.
 
 Neste script foram usados as bibliotecas Torch e Transformers. Sendo necessário instalar as bibliotecas Torch e Transformers (pip install).
 
-### Ao final da análise, será criado um arquivo txt com as sentenças selecionadas e em qual linhas elas se encontram no arquivo de origem.
-Vale ressaltar que sentenças podem ser repetidas ao longo dos textos de origem, desta forma, todas as linhas que possuirem alguma das sentenças selecionadas durante a analise serão descritas.
+#### Ao final da análise, será criado um arquivo txt com as sentenças selecionadas e em qual linhas elas se encontram no arquivo de origem. Vale ressaltar que sentenças podem ser repetidas ao longo dos textos de origem, desta forma, todas as linhas que possuirem alguma das sentenças selecionadas durante a analise serão descritas.
 
 ![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxograma.png?raw=true)
