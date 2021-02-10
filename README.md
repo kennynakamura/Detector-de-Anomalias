@@ -10,6 +10,13 @@ Como usar o programa
 
 Os arquivos a serem analisados devem ser preparados para a análise.
 Separando as frases por sentença em cada linha e apagando as linhas que ficarem com somente uma palavra. 
+Recomenda-se que a sentença "Bom dia" e suas variações sejam retiradas.
+Estas alterações no texto original podem ser feitas usando regex.
+
+Exemplo
+Original:     Levei o carro para o mecânico hoje, ontem estava ocupado.
+Alteradas:    Levei o carro para o mecânico hoje
+              ontem estava ocupado
 
 Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
 
@@ -17,14 +24,16 @@ ArquivoTxT - Onde os arquivos txt a serem analisados devem ser colocados
 result     - Onde o arquivo único com todos os textos juntos será criado  
 todos      - Arquivos separados com o mesmo número de linhas será criado
 
-Na mesma pasta principal deve-se ter uma paste chamada "bert-base-multilingual-uncased" 
+Na mesma pasta principal deve-se ter uma pasta chamada "bert-base-multilingual-uncased" 
 Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
 https://huggingface.co/bert-base-multilingual-uncased/tree/main 
-
 ou podem ser baixados pelo drive
-
 https://drive.google.com/drive/folders/10L_3YAtaHT0AC0XGoXPj-UGoNErgtnu3?usp=sharing
+Estes são arquivos que auxiliaram a análise do texto.
 
-Neste script foi usado os modelos do Torch, do PyTorch. Por isso é necessário instalar as bibliotecas Torch e Transformers (pip install)
+Neste script foram usados as bibliotecas Torch e Transformers. Sendo necessário instalar as bibliotecas Torch e Transformers (pip install).
+
+Ao final da análise, será criado um arquivo txt com as sentenças selecionadas e em qual linhas elas se encontram no arquivo de origem.
+Vale ressaltar que sentenças podem ser repetidas ao longo dos textos de origem, desta forma, todas as linhas que possuirem alguma das sentenças selecionadas durante a analise serão descritas.
 
 ![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxograma.png?raw=true)
