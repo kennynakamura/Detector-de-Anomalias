@@ -13,10 +13,13 @@ Separando as frases por sentença em cada linha e apagando as linhas que ficarem
 Recomenda-se que a sentença "Bom dia" e suas variações sejam retiradas. 
 Estas alterações no texto original podem ser feitas usando regex. 
 
-Exemplo
-Original:     Levei o carro para o mecânico hoje, ontem estava ocupado. 
-Alteradas:    Levei o carro para o mecânico hoje 
-              ontem estava ocupado
+Exemplo  
+
+Original:     Levei o carro para o mecânico hoje, ontem estava ocupado.  
+
+Alteradas:    Levei o carro para o mecânico hoje  
+              ontem estava ocupado  
+              
 
 Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
 
