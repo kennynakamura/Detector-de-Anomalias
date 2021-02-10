@@ -1,4 +1,4 @@
-# Detector-de-Anomalias
+# Detector de Anomalias
 
 As investigações digitais têm enfrentado um aumento exponencial da quantidade de dados disponíveis para serem analisados em uma investigação. Esses dados são produzidos de inúmeras formas, desde de e-mails, transações bancárias, troca de mensagens instantâneas, localizações geográficas, acesso de sites, entre outras. Desta forma, é inviável que um analista investigue de maneira eficiente todos os dados coletados durante uma investigação sem o auxílio de ferramentas de análise [Nicole B et all 2005]. Essas ferramentas são softwares que buscam encontrar dados relacionados especificamente a investigação, além de significados, padrões e anormalidades sobre todo o conjunto de arquivos, esse processo é chamado de Data Mining.
 
@@ -6,7 +6,7 @@ O escopo deste trabalho é sobre o processo de análise dos grandes conjuntos de
 
 Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations. DigitalForensics 2005: Advances in Digital Forensics pp 3-16. 
 
-##Como usar o programa
+## Como usar o programa
 
 Os arquivos a serem analisados devem ser preparados para a análise, separando as frases por sentença em cada linha e apagando as linhas que ficarem com somente uma palavra.\
 Recomenda-se que a sentença "Bom dia" e suas variações sejam retiradas.\
@@ -20,7 +20,7 @@ Levei o carro para o mecânico hoje, ontem estava ocupado.
 Levei o carro para o mecânico hoje\
 ontem estava ocupado
               
-######Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
+###### Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
 
 **ArquivoTxT**\
 Onde os arquivos txt a serem analisados devem ser colocados, somente nesse que o usuário deve interagir\
@@ -38,7 +38,7 @@ Estes são arquivos que auxiliaram a análise do texto.
 
 Neste script foram usados as bibliotecas Torch e Transformers. Sendo necessário instalar as bibliotecas Torch e Transformers (pip install).
 
-###Ao final da análise, será criado um arquivo txt com as sentenças selecionadas e em qual linhas elas se encontram no arquivo de origem.
+### Ao final da análise, será criado um arquivo txt com as sentenças selecionadas e em qual linhas elas se encontram no arquivo de origem.
 Vale ressaltar que sentenças podem ser repetidas ao longo dos textos de origem, desta forma, todas as linhas que possuirem alguma das sentenças selecionadas durante a analise serão descritas.
 
 ![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxograma.png?raw=true)
