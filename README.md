@@ -15,12 +15,13 @@ Estas alterações no texto original podem ser feitas usando regex.
 
 Exemplo  
 
-Original:     Levei o carro para o mecânico hoje, ontem estava ocupado.  
+Original:     
+Levei o carro para o mecânico hoje, ontem estava ocupado.  
 
-Alteradas:    Levei o carro para o mecânico hoje  
-              ontem estava ocupado  
+Alteradas:\
+Levei o carro para o mecânico hoje\
+ontem estava ocupado\
               
-
 Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
 
 ArquivoTxT - Onde os arquivos txt a serem analisados devem ser colocados  
