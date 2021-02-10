@@ -25,7 +25,7 @@ Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma
 -ArquivoTxT-\
 Onde os arquivos txt a serem analisados devem ser colocados\
 -result-\
-Onde o arquivo único com todos os textos juntos será criado\ 
+Onde o arquivo único com todos os textos juntos será criado\
 -todos-\
 Arquivos separados com o mesmo número de linhas será criado
 
