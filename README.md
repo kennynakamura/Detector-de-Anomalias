@@ -8,14 +8,14 @@ Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations
 
 Como usar o programa
 
-Os arquivos a serem analisados devem ser preparados para a análise.
-Separando as frases por sentença em cada linha e apagando as linhas que ficarem com somente uma palavra. 
-Recomenda-se que a sentença "Bom dia" e suas variações sejam retiradas.
-Estas alterações no texto original podem ser feitas usando regex.
+Os arquivos a serem analisados devem ser preparados para a análise.\n
+Separando as frases por sentença em cada linha e apagando as linhas que ficarem com somente uma palavra.\n
+Recomenda-se que a sentença "Bom dia" e suas variações sejam retiradas.\n
+Estas alterações no texto original podem ser feitas usando regex.\n
 
 Exemplo
-Original:     Levei o carro para o mecânico hoje, ontem estava ocupado.
-Alteradas:    Levei o carro para o mecânico hoje
+Original:     Levei o carro para o mecânico hoje, ontem estava ocupado.\n
+Alteradas:    Levei o carro para o mecânico hoje\n
               ontem estava ocupado
 
 Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
