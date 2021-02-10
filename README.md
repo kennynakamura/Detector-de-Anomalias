@@ -8,8 +8,7 @@ Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations
 
 Como usar o programa
 
-Os arquivos a serem analisados devem ser preparados para a análise.\
-Separando as frases por sentença em cada linha e apagando as linhas que ficarem com somente uma palavra.\
+Os arquivos a serem analisados devem ser preparados para a análise, separando as frases por sentença em cada linha e apagando as linhas que ficarem com somente uma palavra.\
 Recomenda-se que a sentença "Bom dia" e suas variações sejam retiradas.\
 Estas alterações no texto original podem ser feitas usando regex.
 
@@ -23,9 +22,9 @@ ontem estava ocupado
               
 Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
 
--ArquivoTxT-
+-ArquivoTxT-\
 Onde os arquivos txt a serem analisados devem ser colocados\
--result-
+-result-\
 Onde o arquivo único com todos os textos juntos será criado\ 
 -todos-\
 Arquivos separados com o mesmo número de linhas será criado
