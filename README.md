@@ -6,30 +6,30 @@ O escopo deste trabalho é sobre o processo de análise dos grandes conjuntos de
 
 Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations. DigitalForensics 2005: Advances in Digital Forensics pp 3-16. 
 
-Como usar o programa
+##Como usar o programa
 
 Os arquivos a serem analisados devem ser preparados para a análise, separando as frases por sentença em cada linha e apagando as linhas que ficarem com somente uma palavra.\
 Recomenda-se que a sentença "Bom dia" e suas variações sejam retiradas.\
 Estas alterações no texto original podem ser feitas usando regex.
 
 Exemplo  
-Original:     
+**Original**:     
 Levei o carro para o mecânico hoje, ontem estava ocupado.  
 
-Alteradas:\
+**Alteradas**\
 Levei o carro para o mecânico hoje\
 ontem estava ocupado
               
-Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
+######Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py 
 
--ArquivoTxT-\
-Onde os arquivos txt a serem analisados devem ser colocados\
--result-\
-Onde o arquivo único com todos os textos juntos será criado\
--todos-\
-Arquivos separados com o mesmo número de linhas será criado
+**ArquivoTxT**\
+Onde os arquivos txt a serem analisados devem ser colocados, somente nesse que o usuário deve interagir\
+**result**\
+Onde o arquivo único com todos os textos juntos será criado automaticamente\
+**todos**\
+Arquivos separados com o mesmo número de linhas será criado automaticamente
 
-Na mesma pasta principal deve-se ter uma pasta chamada "bert-base-multilingual-uncased" 
+Na mesma pasta principal deve-se ter uma pasta chamada **"bert-base-multilingual-uncased"** 
 Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
 https://huggingface.co/bert-base-multilingual-uncased/tree/main \
 ou podem ser baixados pelo drive\
@@ -38,7 +38,7 @@ Estes são arquivos que auxiliaram a análise do texto.
 
 Neste script foram usados as bibliotecas Torch e Transformers. Sendo necessário instalar as bibliotecas Torch e Transformers (pip install).
 
-Ao final da análise, será criado um arquivo txt com as sentenças selecionadas e em qual linhas elas se encontram no arquivo de origem.
+###Ao final da análise, será criado um arquivo txt com as sentenças selecionadas e em qual linhas elas se encontram no arquivo de origem.
 Vale ressaltar que sentenças podem ser repetidas ao longo dos textos de origem, desta forma, todas as linhas que possuirem alguma das sentenças selecionadas durante a analise serão descritas.
 
 ![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxograma.png?raw=true)
