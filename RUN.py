@@ -1,16 +1,12 @@
 import os
-import torch
 import glob
-import itertools
-from statistics import mean
-import transformers as ppb
-import torch.quantization
-import torch.nn as nn
-from torch.nn.functional import softmax
-import multiprocessing as mp
-import numpy as np
 import time
 import json
+import itertools
+import numpy as np
+import transformers as ppb
+import multiprocessing as mp
+from torch.nn.functional import softmax
 from multiprocessing import Process, freeze_support
 
 from transformers import BertTokenizer, BertForNextSentencePrediction
@@ -36,7 +32,6 @@ def Tudo(caminho, filtro):
          FrasesComp.append(b)
          FrasesComp.append(a)
     Lista = {i:FrasesComp.count(i) for i in set(FrasesComp)}
-
     Ranking = sorted(Lista, key=Lista.get, reverse=True)[:5]
     print(Ranking)
     return Ranking
@@ -59,9 +54,7 @@ if __name__ == '__main__':
             with open(f, "rb") as infile:
                 outfile.write(infile.read())
     list = os.listdir(Path + '/ArquivosTxT/') 
-
-    #number_files = 10
-    
+  
     file = open(Path + "/result/result.txt","r",encoding = "utf-8-sig") 
     Counter = 0 
     Content = file.read() 
@@ -69,8 +62,7 @@ if __name__ == '__main__':
     for i in CoList: 
        if i: 
           Counter += 1
-
-    #lines_per_file = round(Counter/number_files)
+		
     lines_per_file = round(Counter/numerofiles)
     smallfile = None
 
