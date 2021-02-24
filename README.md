@@ -42,4 +42,4 @@ Em seguida, execute o script RUN.py
 
 #### Ao final da análise, será criado um arquivo txt na pasta principal com as sentenças selecionadas e em qual linhas elas se encontram no arquivo de origem. Vale ressaltar que sentenças podem ser repetidas ao longo dos textos de origem, desta forma, todas as linhas que possuirem alguma das sentenças selecionadas durante a analise serão descritas.
 
-![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxograma.png?raw=true)
+![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxograma2.0.png?raw=true)
