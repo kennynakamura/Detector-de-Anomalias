@@ -17,8 +17,8 @@ Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations
 
 ## Como funciona o programa
 
-A seleção realizada durante a análise tem como o princípio ponderar a possibilidade de uma frase ser consequente de outra. Essa possibilidade é inferida com um valor entre 0 e 1.\
-Desta forma, para que uma frase seja selecionada, é determinado um valor mínimo em que a comparação deve resultar, assim, as frases que mais vezes forem selecionadas serão destacadas.\
+A seleção realizada durante a análise tem como o princípio ponderar a possibilidade de uma frase ser consequente de outra. Essa possibilidade é inferida com um valor entre 0 e 1.
+Desta forma, para que uma frase seja selecionada, é determinado um valor mínimo em que a comparação deve resultar, assim, as frases que mais vezes forem selecionadas serão destacadas.
 
 Exemplo de sentenças  
 **Original**:     
