@@ -7,27 +7,29 @@ O escopo deste trabalho é sobre o processo de análise dos grandes conjuntos de
 O algoritmo funciona com as seguintes etapas:
 - Extração dos dados no dispositivos.
 - Processamento dos dados, organizando de maneira que a ferramenta posso ler os arquivos.
-- Seleção dos dados de acordo com as especificações.
-- Agrupamento dos dados selecionados e criado o arquivo com as informações.
+- Seleção dos dados suspeitos.
+- Agrupamento dos dados selecionados e criado o arquivo para a visualização.
 - Análise pelo investigador a procura de informações relevantes.
 
 ![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/Apresentação1.png?raw=true)
 
 Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations. DigitalForensics 2005: Advances in Digital Forensics pp 3-16. 
 
-## Como usar o programa
+## Como funciona o programa
 
-Os arquivos a serem analisados devem ser preparados para a análise, separando as frases por sentença em cada linha e apagando as linhas que ficarem com somente uma palavra.\
-Recomenda-se que a sentença "Bom dia" e suas variações sejam retiradas.\
-Estas alterações no texto original podem ser feitas usando regex.
+A seleção realizada durante a análise tem como o princípio ponderar a possibilidade de uma frase ser consequente de outra. Essa possibilidade é inferida com um valor entre 0 e 1.\
+Desta forma, para que uma frase seja selecionada, é determinado um valor mínimo em que a comparação deve resultar, assim, as frases que mais vezes forem selecionadas serão destacadas.\
 
-Exemplo  
+Exemplo de sentenças  
 **Original**:     
-Levei o carro para o mecânico hoje, ontem estava ocupado.  
+Frase: Levei o carro para o mecânico hoje, ontem estava ocupado.  
 
 **Alteradas**\
-Levei o carro para o mecânico hoje\
-ontem eu estava ocupado
+Sentença 1: Levei o carro para o mecânico hoje\
+Sentença 2: ontem eu estava ocupado
+
+Para essa seleção é utilizada o modelo pré-treinado de NLP, BERT, na funcionalidade Next Sentence Prediction. Foi escolhido este modelo pelo seu treinamento ter ocorrido levando em consideração o contexto das palavras, uma característica essencial nesta tarefa.\
+BERT é um modelo de Machine Learning pré-treinado que pode ser treinado novamente para uma tarefa específica, Fine Tunning, mas para a esta tarefa não foi realizado nenhum treinamento adicional, utilizando o model pré-treinado.\
 
 Na mesma pasta principal deve-se ter uma pasta chamada **"bert-base-multilingual-uncased"** 
 Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
@@ -37,8 +39,6 @@ https://drive.google.com/drive/folders/10L_3YAtaHT0AC0XGoXPj-UGoNErgtnu3?usp=sha
 Estes são arquivos que auxiliaram a análise do texto.
 
 Neste script foram usados as bibliotecas Torch e Transformers, sendo necessário instalar (pip install).
-
-Em seguida, execute o script RUN.py 
 
 #### Ao final da análise, será criado um arquivo txt na pasta principal com as sentenças selecionadas e em qual linhas elas se encontram no arquivo de origem. Vale ressaltar que sentenças podem ser repetidas ao longo dos textos de origem, desta forma, todas as linhas que possuirem alguma das sentenças selecionadas durante a analise serão descritas.
 
