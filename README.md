@@ -6,7 +6,7 @@ O escopo deste trabalho é sobre o processo de análise dos grandes conjuntos de
 
 O algoritmo funciona com as seguintes etapas: Extração dos dados no dispositivos, Processamento dos dados, Seleção dos dados, Agrupamento e Análise pelo investigador.
 
-![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/Apresentação1.png.jpg?raw=true)
+![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/Apresentação1.png?raw=true)
 
 Nicole B, Jan C (2005) Dealing with Terabyte Data Sets in Digital Investigations. DigitalForensics 2005: Advances in Digital Forensics pp 3-16. 
 
