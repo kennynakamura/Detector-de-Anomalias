@@ -4,7 +4,12 @@ As investigações digitais têm enfrentado um aumento exponencial da quantidade
 
 O escopo deste trabalho é sobre o processo de análise dos grandes conjuntos de dados, especificamente de diálogos em texto, buscando encontrar códigos ocultos que sejam relacionados a atividades criminosas. A demanda desta aplicação se dá pelo amplo uso de codinomes com intuito de dissuadir uma investigação, e a não produção de provas que comprometam o criminoso.  Assim espera-se que o projeto desenvolvido identifique codinomes, mesmo com uma alta taxa de erro esperada dada a complexidade do problema.  
 
-O algoritmo funciona com as seguintes etapas: Extração dos dados no dispositivos, Processamento dos dados, Seleção dos dados, Agrupamento e Análise pelo investigador.
+O algoritmo funciona com as seguintes etapas:
+- Extração dos dados no dispositivos.
+- Processamento dos dados, organizando de maneira que a ferramenta posso ler os arquivos.
+- Seleção dos dados de acordo com as especificações.
+- Agrupamento dos dados selecionados e criado o arquivo com as informações.
+- Análise pelo investigador a procura de informações relevantes.
 
 ![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/Apresentação1.png?raw=true)
 
