@@ -19,15 +19,6 @@ Levei o carro para o mecânico hoje, ontem estava ocupado.
 **Alteradas**\
 Levei o carro para o mecânico hoje\
 ontem eu estava ocupado
-              
-**Cria-se 3 pastas: ArquivoTxT, result, todos. Todas elas devem ficar em uma mesma pasta principal com o arquivo RUN.py**
-
-**ArquivoTxT**\
-Onde os arquivos txt a serem analisados devem ser colocados, somente nesse que o usuário deve interagir\
-**result**\
-Onde o arquivo único com todos os textos juntos será criado automaticamente\
-**todos**\
-Arquivos separados com o mesmo número de linhas será criado automaticamente
 
 Na mesma pasta principal deve-se ter uma pasta chamada **"bert-base-multilingual-uncased"** 
 Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
