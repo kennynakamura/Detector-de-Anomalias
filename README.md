@@ -29,9 +29,9 @@ Sentença 1: Levei o carro para o mecânico hoje\
 Sentença 2: ontem eu estava ocupado
 
 Para essa seleção é utilizada o modelo pré-treinado de NLP, BERT, na funcionalidade Next Sentence Prediction. Foi escolhido este modelo pelo seu treinamento ter ocorrido levando em consideração o contexto das palavras, uma característica essencial nesta tarefa.\
-BERT é um modelo de Machine Learning pré-treinado que pode ser treinado novamente para uma tarefa específica, Fine Tunning, mas para a esta tarefa não foi realizado nenhum treinamento adicional, utilizando o model pré-treinado.\
+BERT é um modelo de Machine Learning pré-treinado que pode ser treinado novamente para uma tarefa específica, Fine Tunning, mas para a esta tarefa não foi realizado nenhum treinamento adicional, utilizando o model pré-treinado. O modelo específico de BERT escolhido foi o "bert-base-multilingual-uncased", que foi treinado com 104 idiomas, incluindo o português. O treinamento foi realizado com as páginas disponíveis do Wikipédia de cada idioma.\
 
-Na mesma pasta principal deve-se ter uma pasta chamada **"bert-base-multilingual-uncased"** 
+A pasta com o modelo é chamada **"bert-base-multilingual-uncased"** 
 Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
 https://huggingface.co/bert-base-multilingual-uncased/tree/main \
 ou podem ser baixados pelo drive\
