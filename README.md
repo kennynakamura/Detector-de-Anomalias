@@ -21,7 +21,7 @@ A seleção realizada durante a análise tem como o princípio ponderar a possib
 Desta forma, para que uma frase seja selecionada, é determinado um valor mínimo em que a comparação deve resultar, assim, as frases que mais vezes forem selecionadas serão destacadas.
 
 Para essa seleção é utilizada o modelo pré-treinado de NLP, BERT, na funcionalidade Next Sentence Prediction. Foi escolhido este modelo pelo seu treinamento ter ocorrido levando em consideração o contexto das palavras, uma característica essencial nesta tarefa.\
-BERT é um modelo de Machine Learning pré-treinado que pode ser treinado novamente para uma tarefa específica, Fine Tunning, mas para a esta tarefa não foi realizado nenhum treinamento adicional, utilizando o model pré-treinado. O modelo específico de BERT escolhido foi o "bert-base-multilingual-uncased", desenvolvido pela Google, que foi treinado com 104 idiomas, incluindo o português. O treinamento foi realizado com as páginas disponíveis do Wikipédia de cada idioma.\
+BERT é um modelo de Machine Learning pré-treinado que pode ser treinado novamente para uma tarefa específica, Fine Tunning, mas para a esta tarefa não foi realizado nenhum treinamento adicional, utilizando o model pré-treinado. O modelo específico de BERT escolhido foi o "bert-base-multilingual-uncased", desenvolvido pela Google, treinado com 104 idiomas, incluindo o português. O treinamento foi realizado com as páginas disponíveis do Wikipédia de cada idioma.\
 
 A pasta com o modelo é chamada **"bert-base-multilingual-uncased"** 
 Dentro desta pasta deve haver 3 arquivos: vocab.txt, config.json e pytorch_model que podem ser baixados o seuinte link:  
