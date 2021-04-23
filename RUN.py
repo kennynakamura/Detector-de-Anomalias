@@ -2,6 +2,11 @@ import os
 import glob
 import time
 import json
+import re
+import hashlib
+import threading
+import sys
+import itertools
 import shutil
 import itertools
 import numpy as np
@@ -9,11 +14,7 @@ import multiprocessing as mp
 from torch.nn.functional import softmax
 from multiprocessing import Process, freeze_support
 from transformers import BertTokenizer, BertForNextSentencePrediction
-import re
-import hashlib
-import threading
-import sys
-import itertools
+
 from func import limpar, deEmojify, datacleaning
 
 # Pegando os arquivos de configuração e importando o modelo de NSP
