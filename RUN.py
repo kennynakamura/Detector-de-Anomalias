@@ -203,7 +203,6 @@ if __name__ == '__main__':
   load.start() 
   worker = threading.Thread(target=work)
   done = work(filelist)  #Aqui você recebe o valor True
-  worker.start()
 
   # Escrevendo linhas suspeitas de cada arquivo
   suspeitas = []
@@ -252,23 +251,4 @@ if __name__ == '__main__':
   shutil.rmtree(path + "/resultado_regex/") # result do regex
   shutil.rmtree(path +'/ArquivosTxT/')
   shutil.rmtree(path + '/alterados/')
-
-filelist = os.listdir(path + "/analise/")
-
-print((databans))
-
-bene = ['adicionou você',
-'<arquivo de mídia oculto>',
-'criou o grupo',
-'https://',
-'as mensagens e as chamadas são protegidas com a criptografia de ponta a ponta e ficam somente entre você e os participantes desta conversa',
-'essa mensagem foi apagada',
-'criou o grupo',
-'<Media omitted>',
-'Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.',
-'created group']
-
-print((bene))
-
-bene == databans
 
