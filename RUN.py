@@ -1,4 +1,5 @@
 import os
+os.environ["PYTORCH_JIT"] = "0"
 import glob
 import time
 import json
