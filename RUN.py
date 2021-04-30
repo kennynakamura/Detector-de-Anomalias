@@ -106,7 +106,7 @@ if __name__ == '__main__':
   freeze_support()
   
   # Criação de pastas auxiliares
-  auxiliares  = ['/ArquivosTxT/', "/alterados/", "/todos/", "/resultado_regex/", '/Resultado/']
+  auxiliares  = ['/ArquivosTxT/', "/alterados/", "/todos/", "/resultado_regex/"]
   for titulo in auxiliares:
     if os.path.isdir(path+titulo) == True:
       pasta = path+titulo
@@ -116,6 +116,9 @@ if __name__ == '__main__':
            os.remove(path+titulo+file)
     else:
       os.mkdir(path+titulo)
+
+  if not os.path.exists(path + '/Resultado/'):
+     os.makedirs(path + '/Resultado/')
 
   # Captura e lê os arquivos a serem processados
   for file in os.listdir(path + "/analise"):
