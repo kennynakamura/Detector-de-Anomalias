@@ -64,18 +64,29 @@ def datacleaning(content2, path):
       t.write(line[1:])
   t.close()
   p.close()
+  
   gg = open(path + "/alterados/novo2.txt", "r", encoding = "utf-8")
   f = open(path + "/alterados/novo3.txt", "w", encoding = "utf-8")
   hh = gg.readlines()
-  ignore = ['bom dia', 'boa noite', 'legal',  'boa tarde', 'tudo bem','ok']
+  ignore = ['bom dia', 'boa noite', 'legal',  'boa tarde', 'tudo bem','ok', 'oi ']
   for line in hh:
-    if " " in line and not any(word in line for word in ignore):
+    if " " in line and not any(item in line for item in ignore):
       f.write(line)
   f.close()
   gg.close()
-  lines = [i for i in open(path + "/alterados/novo3.txt", encoding = "utf-8") if i[:-1]]
+  
+  kk = open(path + "/alterados/novo3.txt", encoding = "utf-8")
+  ll = open(path + "/alterados/novo4.txt", "w", encoding = "utf-8")
+  pp = kk.readlines()
+  for line in pp:
+     line = line.rstrip()
+     if " " in line:
+        ll.write(line+ '\n')
+  ll.close()
+  kk.close()
+  
+  lines = [i for i in open(path + "/alterados/novo4.txt", encoding = "utf-8") if i[:-1]]
   final = open(path + "/ArquivosTxT/final.txt", 'w', encoding = "utf-8")
-
   pattern2 = [',','.',':','"',':',')','(','*','“','”']
   for line in lines:
     line = line.lower()
@@ -86,5 +97,3 @@ def datacleaning(content2, path):
             character = re.sub(i,"", character)
       final.write(character)
   final.close()
-
-
