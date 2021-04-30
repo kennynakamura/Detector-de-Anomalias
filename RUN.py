@@ -1,28 +1,27 @@
 import os
-os.environ["PYTORCH_JIT"] = "0"
 import glob
 import time
 import json
+from tqdm import tqdm
+import shutil
+import itertools
+import numpy as np
+import multiprocessing as mp
+import torch.jit
+from torch.nn.functional import softmax
+from multiprocessing import Process, freeze_support
+from transformers import BertTokenizer, BertForNextSentencePrediction
 import re
 import hashlib
 import threading
 import sys
 import itertools
-import shutil
-import itertools
-import numpy as np
-import multiprocessing as mp
-from torch.nn.functional import softmax
-from multiprocessing import Process, freeze_support
-from transformers import BertTokenizer, BertForNextSentencePrediction
-
 from func import limpar, deEmojify, datacleaning
 
 # Pegando os arquivos de configuração e importando o modelo de NSP
 path = os.getcwd()
-bert_file = '/drive/MyDrive/bert-base-multilingual-uncased (1)'
-tokenizer = BertTokenizer.from_pretrained(path + bert_file)
-model = BertForNextSentencePrediction.from_pretrained(path + bert_file)
+tokenizer = BertTokenizer.from_pretrained(path + '/modeloBertimbau/')
+model = BertForNextSentencePrediction.from_pretrained(path + "/modeloBertimbau/")
 
 def get_result(result):
     global Listao
@@ -33,6 +32,8 @@ def comparar(caminho, filtro):
        data = file.read().lower()
        data = data.split('\n')
        data = [x for x in data if x] 
+       quantidadeLinhas = len(data)
+       selecao = round(quantidadeLinhas/20)
        FrasesComp = []
        Listao= []
        combinations = itertools.combinations(data, 2)
@@ -46,7 +47,7 @@ def comparar(caminho, filtro):
          FrasesComp.append(b)
          FrasesComp.append(a)
     Lista = {i:FrasesComp.count(i) for i in set(FrasesComp)}
-    Ranking = sorted(Lista, key=Lista.get, reverse=True)[:5]
+    Ranking = sorted(Lista, key=Lista.get, reverse=True)[:selecao]
     return Ranking
 	
 def animate():
@@ -60,8 +61,7 @@ def animate():
 
 def work(files):
     #long process here
-    
-    for i in files:
+    for i in (files):
         pool.apply_async(comparar, args=(path + "/todos/" + i,filtro,), callback=get_result)
     pool.close()
     pool.join()
@@ -72,19 +72,17 @@ def digitar_cores():
     # Interação com o Usuário
     print("\nDetector de Anomalias\n\nO uso é limitado para que sobre 2 cores da máquina")
     cpus = mp.cpu_count()
-    # cpusu = cpus - 2
-    cpusu = cpus
+    cpusu = cpus - 2
+    #cpusu = cpus
     while True:
       try:
         cores = int(input("Digite o número de cores que deseja usar ou enter para default(2): ") or "2")
         if cores <= cpusu:
           break
+        else:
           print("Número de cores maior do que possível")
       except Exception as e:
         print(e)
-      
-    numerofiles = int(input("\nCada divisão irá selecionar 5 frases suspeitas\n \
-    Digite a quantidade que o arquivo será dividido para análise ou enter para default(1): ") or "1")
 
     print("\nO limite de filtro deve estar entre 0.1 e 0.99")
     
@@ -97,7 +95,7 @@ def digitar_cores():
       except Exception as e:
         print(e)
 
-    return numerofiles, cores, filtro
+    return cores, filtro
 
 if __name__ == '__main__':
 
@@ -116,10 +114,10 @@ if __name__ == '__main__':
            os.remove(path+titulo+file)
     else:
       os.mkdir(path+titulo)
-
+      
   if not os.path.exists(path + '/Resultado/'):
      os.makedirs(path + '/Resultado/')
-
+    
   # Captura e lê os arquivos a serem processados
   for file in os.listdir(path + "/analise"):
      if file.endswith(".txt"):
@@ -146,7 +144,7 @@ if __name__ == '__main__':
   start_time = time.time()
 
   # Valores definidos pelo usuário
-  cores, numerofiles, filtro = digitar_cores()
+  cores, filtro = digitar_cores()
   
   # Lê todos os arquivos limpos junta em apenas um arquivo
   read_files = glob.glob(path + "/ArquivosTxT/*.txt")
@@ -165,7 +163,7 @@ if __name__ == '__main__':
     if i:
       Counter += 1
 
-  lines_per_file = round(Counter/numerofiles)
+  lines_per_file = round(Counter/4)
   smallfile = None
 
   #Etapa de codificação dos dados em bytes
@@ -234,9 +232,9 @@ if __name__ == '__main__':
     
   # Criação de arquivo final com a descrição dos parâmetros
   linhas = [] 
-  with open(path + '/Resultado/' + nome +' - Resultado -'+ 'C'+str(cores)+'-'+'D'+str(numerofiles)+'-'+'F'+str(filtro)+'.txt','w', encoding = "utf-8-sig") as f:
+  with open(path + '/Resultado/' + nome +' - Resultado -'+ 'C'+str(cores)+'-'+'F'+str(filtro)+'.txt','w', encoding = "utf-8-sig") as f:
     f.write("Análise Detector de Anomalias\n")
-    f.write("\nOs parâmetros utilizados foram\nNúmero de processamentos paralelos(cores):" + str(cores) + "\nDivisão do arquivo:" + str(numerofiles) + "\nFiltro:" + str(filtro))
+    f.write("\nOs parâmetros utilizados foram\nNúmero de processamentos paralelos(cores):" + str(cores)+ "\nFiltro:" + str(filtro))
     f.write("\n\nArquivos e as sentenças suspeitas com o número da linha\n") 
     for value, key in finalmente.items():
       a = str(value)
@@ -244,7 +242,7 @@ if __name__ == '__main__':
       linhas.append(key)
       for linha in linhas:
         for i in linha:
-          f.write(str(i) + "\n")            
+           f.write(str(i) + "\n")            
         
       f.write("\n\n--- Tempo de Execução: %s minutos ---" % tempo)
       f.close
@@ -255,4 +253,3 @@ if __name__ == '__main__':
   shutil.rmtree(path + "/resultado_regex/") # result do regex
   shutil.rmtree(path +'/ArquivosTxT/')
   shutil.rmtree(path + '/alterados/')
-
