@@ -1,0 +1,17 @@
+﻿Análise Detector de Anomalias
+
+Os parâmetros utilizados foram
+Número de processamentos paralelos(cores):4
+Filtro:0.4
+
+Arquivos e as sentenças suspeitas com o número da linha
+
+EmailTeste.txt
+
+nosso endereço é rua marco aurélio 52, mas é um pouco difícil de encontrar porque os números das casas são muito estranhos aqui. --- linha 9
+fui embora de la às 7 horas.  --- linha 37
+flamengo camargo correia. --- linha 57
+amei, amei, amei nova york! --- linha 72
+
+
+--- Tempo de Execução: 0.29 minutos ---
