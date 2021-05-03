@@ -76,8 +76,7 @@ def digitar_cores():
       except Exception as e:
         print(e)
 
-    print("\nO limite de filtro deve estar entre 0.1 e 0.99")
-    
+    print("\nO limite de filtro deve estar entre 0.1 e 0.99")   
     while True:
       try:
         filtro = float(input("Digite o limite para a analise ou enter para default(0.8): ") or "0.8")
