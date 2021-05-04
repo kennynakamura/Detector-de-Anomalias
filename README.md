@@ -43,5 +43,5 @@ Segue o mesmo algoritmo de funcionamento do Bert, mas utiliza os modelos "pt_cor
 ![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxograma2.0.jpg?raw=true)  
   
   
-![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxogramaalgoritmo.png?raw=true)  
+![alt text](https://github.com/kennynakamura/Detector-de-Anomalias/blob/main/fluxogramaalgoritmo2.png?raw=true)  
 A seleção das frases
