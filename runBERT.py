@@ -31,7 +31,7 @@ def comparar(caminho, filtro):
        data = data.split('\n')
        data = [x for x in data if x] 
        quantidadeLinhas = len(data)
-       selecao = round(quantidadeLinhas/20)
+       selecao = 1
        FrasesComp = []
        Listao= []
        combinations = itertools.combinations(data, 2)
@@ -161,7 +161,7 @@ if __name__ == '__main__':
     if i:
       Counter += 1
 
-  lines_per_file = round(Counter/4)
+  lines_per_file = round(Counter/(Counter*0.05))
   smallfile = None
 
   #Etapa de codificação dos dados em bytes
