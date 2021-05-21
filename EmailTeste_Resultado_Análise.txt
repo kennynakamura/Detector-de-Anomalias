@@ -1,0 +1,8 @@
+
+EmailTeste.txt
+
+nosso endereço é rua marco aurélio 52, mas é um pouco difícil de encontrar porque os números das casas são muito estranhos aqui. --- linha 9
+no dia seguinte quarta, brincamos muito, mas as 4 horas da tarde o transformador do poste estourou!! --- linha 35
+flamengo camargo correia. --- linha 57
+amei, amei, amei nova york! --- linha 72
+10000 acarajés santo. --- linha 85
