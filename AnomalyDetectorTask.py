@@ -1,4 +1,4 @@
-﻿import spacy
+import spacy
 import re, os, itertools
 from java.lang import System
 from collections import OrderedDict
@@ -48,17 +48,21 @@ class AnomalyDetectorTask:
         # ['oi, camila', 'tudo bem?', 'tchau', ...] 
         lista = Convert(texto)
         
-        #Data Cleanning das linhas dentro da lista
-        FrasesSeparadas = []
-        for item in lista:
-           item = re.split('[,.!?]', str(item).lower())
-           FrasesSeparadas.append(item)
-        FrasesSeparadas = ([j for i in FrasesSeparadas for j in i])
-        unwanted = {'',' ', 'bom dia', 'boa tarde', 'boa noite'}
-        FrasesSeparadas = [x for x in FrasesSeparadas if x not in unwanted]
-        FrasesSeparadas = [x for x in FrasesSeparadas if ' ' in x]
-        FrasesSeparadas = [s.strip() for s in FrasesSeparadas]
-        FrasesSeparadas = [x for x in FrasesSeparadas if any(y in x for y in ' ')]      
+        def datacleannig(lista):
+           #Data Cleanning das linhas dentro da lista
+           FrasesSeparadas = []
+           for item in lista:
+              item = re.split('[,.!?]', str(item).lower())
+              FrasesSeparadas.append(item)
+           FrasesSeparadas = ([j for i in FrasesSeparadas for j in i])
+           unwanted = {'',' ', 'bom dia', 'boa tarde', 'boa noite'}
+           FrasesSeparadas = [x for x in FrasesSeparadas if x not in unwanted]
+           FrasesSeparadas = [x for x in FrasesSeparadas if ' ' in x]
+           FrasesSeparadas = [s.strip() for s in FrasesSeparadas]
+           FrasesSeparadas = [x for x in FrasesSeparadas if any(y in x for y in ' ')]      
+           return FrasesSeparadas
+        
+        FrasesSeparadas = datacleanning(lista)
         
         #Função para dividir o texto em partes iguais
         def chunks(l, n):
@@ -108,37 +112,13 @@ class AnomalyDetectorTask:
         #Suspeitas é a lista final com todas as linhas suspeitas
         # [ linha suspeita da parte 1, linha suspeita da parte 2, linha suspeita da parte 3]
         # [ L, L, L ] 
-        suspeitas = []
-        for item in Listao:
-           for i in item:
-              suspeitas.append(i)
+        def separando(Listao):
+           suspeitas = []
+           for item in Listao:
+              for i in item:
+                 suspeitas.append(i)
         
-        #Etapa para encontrar a posição das linhas suspeitas dentro do texto original
-        # {  nome do arquivo :  [ lista da linhas com a posição no texto original ] 
-        # {TextoOriginal.txt: ['o carro tá n agaragem -- linha 3', 'a bicicleta quebrou -- linha 7', ... ] }
-        Tudo = {}
-        from collections import defaultdict
-        Tudo = defaultdict(lambda:[])
-        if path.endswith(".txt"):
-          nome = os.path.basename(path)
-          with open(path,'r',encoding = "utf-8") as y:
-              content = y.readlines()
-              content = [s.replace('\n', '') for s in content]
-              for num, line in enumerate(content, 1):
-                line = line.lower()
-                for i in suspeitas:
-                  if i in line:
-                    Tudo[nome].append(line + " --- linha " + str(num))
-        finalmente = dict(Tudo)
+        suspeitas = separando(Listao)
         
-        # Criação da Análise Final 
-        linhas = []     
-        with open(str(path)[:-4] + '_Resultado_Análise.txt','w', encoding = 'utf-8') as f:
-           for value, key in finalmente.items():
-              a = str(value)
-              f.write("\n" + a + "\n\n")
-              linhas.append(key)
-              for item in linhas:
-                  item = list(OrderedDict.fromkeys(item))
-                  for i in item:
-                     f.write(str(i) + "\n")            
+        item.setExtraAttribute('possiblyAnomaly', suspeitas)
+            
