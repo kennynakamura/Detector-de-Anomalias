@@ -37,13 +37,16 @@ class AnomalyDetectorTask:
         
     def process(self, item):
 
-        path = item.getTempFile().getAbsolutePath()
+        categories = item.getCategorySet().toString()
+        if not ("Chats" in categories or "Emails" in categories):
+           return 
 
         def Convert(string):
            li = list(string.split("\n"))
            return li
         
         texto = str(item.getParsedTextCache())
+        
         #Separa o texto em linhas dentro de uma list
         # ['oi, camila', 'tudo bem?', 'tchau', ...] 
         lista = Convert(texto)
