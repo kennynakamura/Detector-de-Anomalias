@@ -51,7 +51,7 @@ class AnomalyDetectorTask:
         # ['oi, camila', 'tudo bem?', 'tchau', ...] 
         lista = Convert(texto)
         
-        def datacleannig(lista):
+        def datacleanning(lista):
            #Data Cleanning das linhas dentro da lista
            FrasesSeparadas = []
            for item in lista:
